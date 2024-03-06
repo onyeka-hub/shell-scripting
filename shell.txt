@@ -1,0 +1,69 @@
+###########################################################################
+Comparisms
+val1 -eq val2 Returns true if the values are equal
+val1 -ne val2 Returns true if the values are not equal
+val1 -gt val2 Returns true if val1 is greater than val2
+val1 -ge val2 Returns true if val1 is greater or equal to val2
+val1 -lt val2 Returns true if val1 is less than val2
+val1 -le val2 Returns true if val1 is less or equal to val2
+
+NUM1=3
+NUM2=5
+
+if [ "$NUM1" -gt "$NUM2" ]
+then
+    echo "$NUM1 is greater than $NUM2"
+else
+    echo "$NUM1 is less than $NUM2"
+fi
+################################################################################
+File conditions
+-d file: True if the file is a directory
+-e file: True if the file exist (not portable, always use -f)
+-f file: True if the provided string is a file
+-g file: True if the group id is set on a file
+-r file: True if the file is readable
+-s file: True if the file has a non-zero size
+-u file: True if the user id is set on a file
+-w file: True if the file is writable
+-x file: True if the file is executable
+
+FILE="test.txt"
+
+if [ -e "$FILE" ]
+then
+    echo "$FILE is a file"
+else
+    echo "$FILE is not a file"
+fi
+##############################################################
+
+# Define two variables with numeric values
+num1=10
+num2=5
+
+# Perform basic arithmetic operations
+sum=$((num1 + num2))
+difference=$((num1 - num2))
+product=$((num1 * num2))
+quotient=$((num1 / num2))
+remainder=$((num1 % num2))
+
+# Display the results
+echo "Number 1: $num1"
+echo "Number 2: $num2"
+echo "Sum: $sum"
+echo "Difference: $difference"
+echo "Product: $product"
+echo "Quotient: $quotient"
+echo "Remainder: $remainder"
+
+# Perform some more complex calculations
+power_of_2=$((num1 ** 2))
+square_root=$(awk "BEGIN { printf \"%.2f\", sqrt($num2) }")
+
+# Display the results
+echo "$num1 raised to the power of 2: $power_of_2"
+echo "Square root of number 2: $square_root"
+####################################################################
+

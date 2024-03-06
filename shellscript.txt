@@ -1,5 +1,3 @@
-# shell scripting tutorial
-
 A script is a set of instructions or commands written in a scripting language or programming language that can be executed by a computer or interpreter. Scripts are used to automate tasks, perform specific actions, or solve problems. They are a fundamental tool in computer programming and system administration.
 
 Here are some key characteristics and uses of scripts:
