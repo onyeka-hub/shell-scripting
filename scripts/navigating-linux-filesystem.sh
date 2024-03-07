@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Display current directory
 echo "Current directory: $PWD"
 

@@ -1,5 +1,5 @@
 onyeka
-Akeem
-Mary
-Jennifer
-John
+akeem
+mary
+jennifer
+john

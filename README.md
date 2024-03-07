@@ -26,7 +26,7 @@ Here are some key characteristics and uses of scripts:
 
 Scripts are a powerful tool in various domains, including software development, system administration, web development, data analysis, and more. They allow users to automate tasks, simplify complex processes, and make their computer systems more efficient and flexible.
 
-what dielet does bourn again shell understands
+## What dielet does bourn again shell understands
 
 The Bourne Again Shell (Bash) is a powerful and widely used Unix shell that extends the capabilities of the original Bourne shell (sh). Bash understands a rich set of features and syntax elements, making it a versatile choice for command-line interaction, scripting, and automation. Here are some of the key features and constructs that Bash understands:
 
@@ -72,8 +72,7 @@ The Bourne Again Shell (Bash) is a powerful and widely used Unix shell that exte
 
 Bash is known for its flexibility, extensibility, and wide adoption across Unix-like systems. Its rich feature set and scripting capabilities make it a versatile tool for both interactive use and automation tasks.
 
-what dielet does powershell understand
-
+## What dielet does powershell understand
 
 PowerShell is a versatile scripting and automation language that is primarily used in Windows environments. PowerShell understands a wide range of cmdlets (pronounced "command-lets") and commands that enable you to perform various tasks, such as system administration, file manipulation, data processing, and more. These cmdlets are designed to work with objects, making PowerShell particularly powerful for working with structured data.
 
@@ -125,7 +124,7 @@ PowerShell is a versatile scripting language that is especially useful for Windo
 
 The Bourne shell, often referred to simply as the "Bourne shell" or "sh," is one of the oldest and most fundamental Unix shells. It was developed by Stephen Bourne at AT&T Bell Labs in the late 1970s. The Bourne shell served as the inspiration for many subsequent Unix shells, including Bash (Bourne Again Shell), which is a popular modern shell.
 
-what is the differnce between bash and power shell
+## What is the differnce between bash and power shell
 
 Bash and PowerShell are both powerful command-line shells, but they have distinct differences in terms of their origins, design philosophies, and capabilities. Here are some key differences between Bash and PowerShell:
 
@@ -151,11 +150,11 @@ Bash and PowerShell are both powerful command-line shells, but they have distinc
 
 In summary, while both Bash and PowerShell are capable command-line shells, they have different design philosophies and are best suited for their respective environments. Bash is a stalwart in Unix-like systems, while PowerShell is a powerful tool for managing Windows systems and is increasingly becoming cross-platform. The choice between them depends on the specific platform and tasks you need to perform.
 
-WSL
+## WSL
 
 Windows Subsystem for Linux (WSL) is a compatibility layer for running a Linux distribution natively on a Windows operating system. It allows you to run a Linux environment alongside your Windows installation without the need for virtual machines. WSL is primarily designed to enhance the development experience for developers working on Windows systems who need to interact with Linux-based tools, applications, and workflows.
 
-Key features and details about WSL include:
+### Key features and details about WSL include:
 
 1. **Linux Distributions:** With WSL, you can install various Linux distributions, such as Ubuntu, Debian, Fedora, and others, from the Microsoft Store or by downloading them manually. Each distribution operates as a standalone environment.
 
@@ -174,8 +173,9 @@ Key features and details about WSL include:
 
 To get started with WSL, you can enable it through the Windows Features settings, install a Linux distribution from the Microsoft Store, and start using it from the command line. You can choose between WSL 1 and WSL 2 based on your requirements and compatibility needs. WSL has become a valuable tool for developers, system administrators, and anyone who needs to work with Linux and Windows together on the same machine.
 
+## shell script samples
 
-!/bin/bash
+#!/bin/bash
 
 echo "hello world"
 
@@ -260,8 +260,40 @@ then
 else
     echo "$NUM1 is less than $NUM2"
 fi
+
+#######################################################################
+# SED COMMAND
+1. A non-interactive text editor
+2. Edits data based on the rules that are provided (can insert, delete, search and replace)
+3. Supports regular expression
+4. Addressing is used to determine which lines to be editted.
+5. The addressing format can be : number (represents a line number), regular expression or both.
+6. The sed command tells sed what to do with the line. Print it, Remove it or Change it
+7. The sed format - sed "command" filename
+8. To print lines containing the pattern root - sed '/root/p' myfile
+9. To supress the default behavior of sed - sed -n'/root/p' /etc/passwd
+10. To print lines from onyeka to root - sed -n'/onyeka/,/root/p' /etc/passwd
+11. To print lines from 2 to the line that begins with us - sed -n'2,/^us/p' /etc/passwd
+12. To substitute text - sed 's/onyeka/charles/g' myfile or sed -n's/onyeka/charles/2' myfile
+13. To delete lines from 1 to 3 (including the 3rd line) - sed '1,3d' myfile
+14. To delete from line 3 to the end - sed '3,$d' myfile 
+15. To delete lines containing root pattern - sed '/root/d' myfile
+16. To delete the third line - sed '3d' myfile
+17. To delete the last line - sed '$d' myfile
+18. To issue a multi command change - sed -e'2d' -e's/onyeka/charles/g' myfile
 ################################################################################
-File conditions
+
+# SORT
+Sort files contents in a specified order: alphabetically, reverve order, number or month - sort names.csv
+-o outputs the result to a file (sort file.txt -o sortedfile.txt is like sort file.txt > sortedfile.txt)
+-r sort in reverse order - sort -r names.csv
+-n sorts numerically if the file contains numbers
+-k sorts accordingly to the kth column (if the file is formatted as a table) - sort -k 2n salary.txt
+-u removes duplicates sort -u names.csv
+-t for delimeter - sort -t ":" -nk3 names.csv
+##################################################################################
+
+# File conditions
 -d file: True if the file is a directory
 -e file: True if the file exist (not portable, always use -f)
 -f file: True if the provided string is a file

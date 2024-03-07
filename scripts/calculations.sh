@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Define two variables with numeric values
 read -p "please put the first number:  " num1
 sleep 5

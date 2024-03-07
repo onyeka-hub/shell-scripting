@@ -1,8 +1,11 @@
+backup.sh
+calculations.sh
 file1.txt
 file2.txt
 file3.txt
 index.txt
 navigating-linux-filesystem.sh
+number3
 practice-scripting.sh
 sorting.sh
 text.txt

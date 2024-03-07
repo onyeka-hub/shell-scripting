@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Create three files
 echo "Creating files..."
 echo "This is file3." > file3.txt
